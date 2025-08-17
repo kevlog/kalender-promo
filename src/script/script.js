@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async function () {
   const response = await fetch("src/data/data.json");
   const rawEvents = await response.json();
-
+  const BASE_URL = "/kalender-promo/"
   // split event multi-hari jadi per-hari
   let events = [];
   rawEvents.forEach(event => {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       // image / placeholder
       if (image) {
         let img = document.createElement("img");
-        img.src = image;
+        img.src = BASE_URL + image;
         img.className = "w-12 h-12 object-cover rounded-lg";
         img.onerror = () => {
           img.remove();
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       document.getElementById("modalDescription").innerHTML = event.description || "Tidak ada deskripsi.";
 
       const img = document.getElementById("modalImage");
-      img.src = event.image || "https://placehold.co/600x400?text=No+Image";
+      img.src = BASE_URL + event.image || "https://placehold.co/600x400?text=No+Image";
 
       img.onerror = function () {
         this.onerror = null;
