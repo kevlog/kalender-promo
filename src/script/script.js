@@ -122,3 +122,12 @@ document.addEventListener("keydown", function(e) {
     }
   }
 });
+
+Swal.fire({
+  title: 'Website Under Maintenance',
+  text: 'Mohon kembali nanti.',
+  icon: 'info',
+  confirmButtonText: 'Oke',
+  allowOutsideClick: false,
+  allowEscapeKey: false
+});
