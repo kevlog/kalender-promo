@@ -1,0 +1,13 @@
+#promoModal a {
+  color: rgb(154, 154, 245);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#modalImage {
+  max-width: 100%;   /* biar tidak melebihi lebar container */
+  max-height: 50vh;  /* biar tidak lebih tinggi dari layar */
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
